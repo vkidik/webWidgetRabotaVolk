@@ -1,0 +1,12 @@
+{
+    "manifest_version": 3,
+    "name": "Мое Расширение",
+    "version": "1.0",
+    "description": "Пример расширения для выполнения кода на странице",
+    "permissions": [
+        "activeTab"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}

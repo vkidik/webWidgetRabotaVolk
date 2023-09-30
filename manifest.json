@@ -1,22 +1,22 @@
 {
-    "name" : "RabotaVolk",
-    "description" : "Расширение для сбора откликов на rabotavolk.ru",
-    "version" : "1.0",
-    "manifest_version" : 3,
-    "icons" : {
-        "16" : "favicon/favicon-16x16.png",
-        "32" : "favicon/favicon-32x32.png",
-        "128" : "favicon/apple-touch-icon.png"
+    "name": "RabotaVolk",
+    "description": "Расширение для сбора откликов на rabotavolk.ru",
+    "version": "1.0",
+    "manifest_version": 3,
+    "icons": {
+        "16": "favicon/favicon-16x16.png",
+        "32": "favicon/favicon-32x32.png",
+        "128": "favicon/apple-touch-icon.png"
     },
-    "permissions" : ["scripting", "activeTab"],
-    "background" : {},
-    "action" : {
-        "default_popup" : "popup.html"
+    "permissions": ["scripting", "activeTab"],
+    "background": {
+        "service_worker": "app.js"
     },
-    "content_scripts" : [
-        {
-            "matches" : [ "<all_urls>" ],
-            "js" : [ "app.js" ]
-        }
-    ]
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [{
+        "matches": ["<all_urls>"],
+        "js": ["app.js"]
+    }]
 }
